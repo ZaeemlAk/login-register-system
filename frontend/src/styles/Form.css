@@ -1,0 +1,114 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #0f766e, #14b8a6);
+  --card-radius: 18px;
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #0fe3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CARD */
+.form-container {
+  position: relative;
+  width: 460px; /* wider card */
+  padding: 4rem 3rem 3rem;
+  border-radius: var(--card-radius);
+  background: var(--bg-gradient);
+  box-shadow: var(--shadow-soft);
+  color: #ffffff;
+}
+
+/* FLOATING SIGN IN BUTTON */
+.signin-button {
+  position: absolute;
+  top: -26px; /* half outside */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px; /* reduced width */
+  padding: 0.7rem 0;
+  background: #ffffff;
+  color: #0f766e;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.signin-button:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* ICON */
+.form-icon {
+  width: 88px;
+  height: 88px;
+  margin: 1.5rem auto 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/* FORM */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  opacity: 0.9;
+}
+
+.form-container input {
+  padding: 0.75rem 0.85rem;
+  margin-bottom: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.form-container input::placeholder {
+  color: #9ca3af;
+}
+
+/* FOOTER */
+.form-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.form-footer a {
+  color: #ecfeff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
